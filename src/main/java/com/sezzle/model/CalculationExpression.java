@@ -10,12 +10,31 @@ package com.sezzle.model;
 public class CalculationExpression {
 	String userName;
 	String expression;
-	long timeStamp;
 	
-	public CalculationExpression(String _userName, String _expression) {
-		userName = _userName;
-		expression = _expression;
-		timeStamp = System.currentTimeMillis();
+	public CalculationExpression(String userName, String expression) {
+		this.userName = userName;
+		this.expression = expression;
 	}
+	
+	public CalculationExpression() {
+		
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getExpression() {
+		return expression;
+	}
+
+	public void setExpression(String expression) {
+		this.expression = expression;
+	}
+
 	
 }

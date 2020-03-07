@@ -19,11 +19,11 @@ public class SocketConfiguration implements WebSocketMessageBrokerConfigurer {
 	@Override
 	  public void configureMessageBroker(MessageBrokerRegistry config) {
 	    config.enableSimpleBroker("/channel");
-	    config.setApplicationDestinationPrefixes("/app");
+	    config.setApplicationDestinationPrefixes("/global");
 	  }
 
 	  @Override
 	  public void registerStompEndpoints(StompEndpointRegistry registry) {
-	    registry.addEndpoint("/sezzle-websocket").withSockJS();
+	    registry.addEndpoint("/sezzle-websocket").setAllowedOrigins("*").withSockJS();
 	  }
 }
